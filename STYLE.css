@@ -1,0 +1,175 @@
+:root {
+  --fondo-app: #1e1e1e;
+  --fondo-boton: #2b2b2b;
+  --fondo-boton-hover: #3a3a3a;
+  --fondo-boton-funcion: #202020;
+  --fondo-boton-funcion-hover: #2f2f2f;
+  --azul-igual: #0f6cbd;
+  --azul-igual-hover: #2f7fc4;
+  --texto: #f2f2f2;
+  --texto-tenue: #a0a0a0;
+  --borde: #333333;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #0e0e0e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+.calculadora {
+  width: 320px;
+  background: var(--fondo-app);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------- HECHO: Barra superior ---------- */
+.barra-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  color: var(--texto);
+  font-size: 14px;
+}
+
+.titulo-app {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.controles-ventana {
+  display: flex;
+  gap: 18px;
+  color: var(--texto-tenue);
+  font-size: 14px;
+}
+
+.subbarra {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 14px 14px;
+  color: var(--texto);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.subbarra .modo {
+  flex: 1;
+}
+
+.subbarra .icono-historial,
+.subbarra .icono-menu-lateral {
+  font-size: 16px;
+  color: var(--texto-tenue);
+  font-weight: 400;
+}
+
+/* ---------- HECHO: Pantalla ---------- */
+.pantalla {
+  text-align: right;
+  color: var(--texto);
+  font-size: 44px;
+  font-weight: 300;
+  padding: 20px 18px;
+  min-height: 70px;
+}
+
+/* ---------- Filas y grilla general ---------- */
+.fila {
+  display: grid;
+  gap: 1px;
+  background: var(--borde);
+}
+
+.fila-memoria {
+  grid-template-columns: repeat(6, 1fr);
+  padding: 4px 1px;
+  background: var(--fondo-app);
+}
+
+.fila-funciones,
+.fila-cientifica,
+.fila-numeros {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* ---------- Botones base ---------- */
+.btn {
+  border: none;
+  background: var(--fondo-boton);
+  color: var(--texto);
+  font-size: 18px;
+  padding: 18px 0;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.btn:hover {
+  background: var(--fondo-boton-hover);
+}
+
+/* ---------- HECHO: fila de memoria ---------- */
+.btn-memoria {
+  background: transparent;
+  color: var(--texto-tenue);
+  font-size: 13px;
+  padding: 8px 0;
+}
+
+.btn-memoria:hover {
+  background: var(--fondo-boton-funcion-hover);
+}
+
+/* ---------- HECHO: fila de funciones y científica ---------- */
+.btn-funcion,
+.btn-cientifico {
+  background: var(--fondo-boton-funcion);
+  font-size: 15px;
+}
+
+.btn-funcion:hover,
+.btn-cientifico:hover {
+  background: var(--fondo-boton-funcion-hover);
+}
+
+/* ---------- Números y operadores (grilla compartida con el equipo) ---------- */
+.btn-numero {
+  font-size: 20px;
+}
+
+.btn-operador {
+  background: var(--fondo-boton-funcion);
+  font-size: 18px;
+}
+
+.btn-operador:hover {
+  background: var(--fondo-boton-funcion-hover);
+}
+
+.btn-cero {
+  grid-column: span 1;
+}
+
+.btn-igual {
+  background: var(--azul-igual);
+  color: white;
+  font-size: 20px;
+}
+
+.btn-igual:hover {
+  background: var(--azul-igual-hover);
+}
