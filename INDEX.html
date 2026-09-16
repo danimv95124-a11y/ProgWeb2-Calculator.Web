@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <div class="calculadora">
+
+    <!-- ============================================ -->
+    <!-- HECHO: Barra superior (líder del proyecto)    -->
+    <!-- ============================================ -->
+    <header class="barra-superior">
+      <div class="titulo-app">
+        <span class="icono-menu">&#9776;</span>
+        <span class="nombre-app">Calculadora</span>
+      </div>
+      <div class="controles-ventana">
+        <span class="control minimizar">&#8211;</span>
+        <span class="control maximizar">&#9633;</span>
+        <span class="control cerrar">&#10005;</span>
+      </div>
+    </header>
+
+    <div class="subbarra">
+      <span class="icono-menu-lateral">&#9776;</span>
+      <span class="modo">Estándar</span>
+      <span class="icono-historial">&#128340;</span>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- HECHO: Pantalla de resultado (líder)          -->
+    <!-- ============================================ -->
+    <div class="pantalla" id="pantalla">0</div>
+
+    <!-- ============================================ -->
+    <!-- HECHO: Fila de memoria (líder)                -->
+    <!-- ============================================ -->
+    <div class="fila fila-memoria">
+      <button class="btn btn-memoria" id="mc">MC</button>
+      <button class="btn btn-memoria" id="mr">MR</button>
+      <button class="btn btn-memoria" id="m-mas">M+</button>
+      <button class="btn btn-memoria" id="m-menos">M-</button>
+      <button class="btn btn-memoria" id="ms">MS</button>
+      <button class="btn btn-memoria" id="m-mas-opciones">M&#8964;</button>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- HECHO: Fila de funciones (líder)              -->
+    <!-- ============================================ -->
+    <div class="fila fila-funciones">
+      <button class="btn btn-funcion" id="porcentaje">%</button>
+      <button class="btn btn-funcion" id="ce">CE</button>
+      <button class="btn btn-funcion" id="c">C</button>
+      <button class="btn btn-funcion" id="borrar">&#9003;</button>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- HECHO: Fila científica (líder)                -->
+    <!-- ============================================ -->
+    <div class="fila fila-cientifica">
+      <button class="btn btn-cientifico" id="inverso">1/x</button>
+      <button class="btn btn-cientifico" id="cuadrado">x&sup2;</button>
+      <button class="btn btn-cientifico" id="raiz">&sup2;&radic;x</button>
+      <button class="btn btn-operador" id="dividir">&#247;</button>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- TODO (compañero/a): botones 7, 8, 9 y "×"     -->
+    <!-- ============================================ -->
+    <div class="fila fila-numeros">
+      <button class="btn btn-numero" id="siete">7</button>
+      <button class="btn btn-numero" id="ocho">8</button>
+      <button class="btn btn-numero" id="nueve">9</button>
+      <button class="btn btn-operador" id="multiplicar">&#215;</button>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- HECHO: botones 4, 5, 6 (líder)                -->
+    <!-- TODO (compañero/a): botón "−"                 -->
+    <!-- ============================================ -->
+    <div class="fila fila-numeros">
+      <button class="btn btn-numero" id="cuatro">4</button>
+      <button class="btn btn-numero" id="cinco">5</button>
+      <button class="btn btn-numero" id="seis">6</button>
+      <button class="btn btn-operador" id="restar">&#8722;</button>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- TODO (compañero/a): botones 1, 2, 3 y "+"     -->
+    <!-- ============================================ -->
+    <div class="fila fila-numeros">
+      <button class="btn btn-numero" id="uno">1</button>
+      <button class="btn btn-numero" id="dos">2</button>
+      <button class="btn btn-numero" id="tres">3</button>
+      <button class="btn btn-operador" id="sumar">+</button>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- TODO (compañero/a): +/-, 0, "," y "="         -->
+    <!-- ============================================ -->
+    <div class="fila fila-numeros">
+      <button class="btn btn-numero" id="signo">+/-</button>
+      <button class="btn btn-numero btn-cero" id="cero">0</button>
+      <button class="btn btn-numero" id="coma">,</button>
+      <button class="btn btn-igual" id="igual">=</button>
+    </div>
+
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
